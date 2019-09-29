@@ -28,6 +28,7 @@ public class RabbitsGrassSimulationSpace {
     	for(int i = 0; i < numInitGrass; i++){
 
       // Choose coordinates
+    
         int x = (int)(Math.random()*(rabbitSpace.getSizeX()));
         int y = (int)(Math.random()*(rabbitSpace.getSizeY()));
         

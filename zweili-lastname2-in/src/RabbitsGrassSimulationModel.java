@@ -132,7 +132,6 @@ public class RabbitsGrassSimulationModel extends SimModelImpl {
 		public void buildModel() {
 			System.out.println("Running BuildModel");
 			rabbitSpace = new RabbitsGrassSimulationSpace(gridSize,gridSize);
-			//rabbitSpace.spreadRabbit(numInitRabbits);
 			rabbitSpace.spreadGrass(numInitGrass,amountEnergyGrass);
 			
 		    for(int i = 0; i < numInitRabbits; i++){
@@ -208,6 +207,8 @@ public class RabbitsGrassSimulationModel extends SimModelImpl {
 
 	  	    Value2DDisplay displayGrass =
 	  	        new Value2DDisplay(rabbitSpace.getCurrentValueSpace(), map);
+	  	    
+	  	  System.out.print(rabbitSpace.getCurrentValueSpace().getSizeX());
 	  	    
 	  	    Object2DDisplay displayAgents = new Object2DDisplay(rabbitSpace.getCurrentAgentSpace());
 	  	    displayAgents.setObjectList(agentList);
